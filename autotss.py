@@ -79,10 +79,6 @@ class autotss:
 
         tsschecker = subprocess.run((path), stdout=subprocess.PIPE, universal_newlines=True)
 
-        version = int(tsschecker.stdout.split('\n')[0].split('-')[1][1:])
-        if version < 321:
-            sys.exit("[ERROR] Your version of tsschecker is too old. Build & install the latest version from https://github.com/DanTheMann15/tsschecker. Exiting...")
-
         return path
 
 
